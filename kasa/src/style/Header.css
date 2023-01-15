@@ -1,0 +1,21 @@
+header {
+	width: 1240px;
+	height: 68px;
+	margin: 40px 100px;
+	padding: 0;
+	display: flex;
+	justify-content: space-between;
+}
+nav {
+	width: 25%;
+	height: 50%;
+	display: flex;
+	margin-top: 17px;
+	justify-content: space-between;
+	font-family: "Montserrat";
+	font-size: 24px;
+}
+p {
+	text-decoration: none;
+	color: #ff6060;
+}
