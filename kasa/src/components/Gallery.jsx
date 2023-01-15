@@ -9,8 +9,8 @@ function Gallery() {
 		<div className="contenaire">
 			{BDD.map((element) => (
 				<div className="box" id={element.id}>
-					<img src={element.cover} alt="" />
-					<h2>{element.title}</h2>
+					<img className="imgGallery" src={element.cover} alt="" />
+					<h2 className="titleBox">{element.title}</h2>
 				</div>
 			))}
 		</div>

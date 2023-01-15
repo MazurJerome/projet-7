@@ -1,0 +1,29 @@
+.bannerAPropos-principal {
+	width: 100%;
+	height: 300px;
+	display: flex;
+}
+.bannerAPropos {
+	position: absolute;
+	width: 86%;
+	height: 223px;
+	left: 7%;
+	top: 171px;
+}
+.clacImgAPropos {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	border-radius: 25px;
+	z-index: 2;
+	background: #000000;
+	mix-blend-mode: darken;
+	opacity: 0.3;
+}
+.imgAPropos {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	border-radius: 25px;
+	z-index: 1;
+}
