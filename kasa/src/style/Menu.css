@@ -29,7 +29,18 @@
 	line-height: 142.6%;
 	color: #ff6060;
 }
+.ButtonMenu {
+	border: 0;
+	background-color: #ff6060;
+}
 .Vector {
 	display: flex;
 	margin: 16px 33px;
+	background-color: #ff6060;
+}
+.Vector180 {
+	display: flex;
+	margin: 16px 33px;
+	background-color: #ff6060;
+	rotate: 180deg;
 }

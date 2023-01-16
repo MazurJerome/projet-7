@@ -1,6 +1,8 @@
+import { useState } from "react";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
 import TitleLogement from "../components/TitleLogement";
+import Carrousel from "../components/Carrousel";
 import Host from "../components/Host";
 import "../style/ficheLogement.css";
 import { useParams } from "react-router-dom";
@@ -9,9 +11,10 @@ import "../style/Menu.css";
 import vector from "../images/Vector.svg";
 
 function FicheLogement() {
+	const [toggle, setToggle] = useState(false);
+	const [toggle1, setToggle1] = useState(false);
 	const { id } = useParams();
 	let product = [];
-	console.log("product 0 ", product);
 	Bank.forEach((element) => {
 		if (element.id === id) {
 			product[0] = element;
@@ -21,7 +24,7 @@ function FicheLogement() {
 	return (
 		<div>
 			<Header />
-			<div>carousel</div>
+			<Carrousel img={product[0].pictures} />
 			<div className="LogementInfos">
 				<TitleLogement
 					title={product[0].title}
@@ -39,22 +42,41 @@ function FicheLogement() {
 					<div className="MenuG">
 						<div className="MenuFix">
 							<h2>Description</h2>
-							<img className="Vector" src={vector} alt="Fleche" />
+							<button className="ButtonMenu" onClick={() => setToggle(!toggle)}>
+								{toggle ? (
+									<img className="Vector" src={vector} alt="Fleche" />
+								) : (
+									<img className="Vector180" src={vector} alt="Fleche" />
+								)}
+							</button>
 						</div>
-						<p className="MenuHide">{product[0].description}</p>
+						{toggle && <p className="MenuHide">{product[0].description}</p>}
 					</div>
 				</div>
 				<div className="MenusLogement50">
 					<div className="MenuD">
 						<div className="MenuFix">
 							<h2>Equipement</h2>
-							<img className="Vector" src={vector} alt="Fleche" />
+							<button
+								className="ButtonMenu"
+								onClick={() => setToggle1(!toggle1)}
+							>
+								{toggle1 ? (
+									<img className="Vector" src={vector} alt="Fleche" />
+								) : (
+									<img className="Vector180" src={vector} alt="Fleche" />
+								)}
+							</button>
 						</div>
-						<ul>
-							{product[0].equipments.map((element) => (
-								<li className="ListEquipements">{element}</li>
-							))}
-						</ul>
+						{toggle1 && (
+							<ul className="MenuHide">
+								{product[0].equipments.map((element, ind) => (
+									<li className="ListEquipements" key={ind}>
+										{element}
+									</li>
+								))}
+							</ul>
+						)}
 					</div>
 				</div>
 			</div>

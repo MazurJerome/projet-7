@@ -30,8 +30,8 @@
 	display: flex;
 	flex-direction: row;
 }
-.MenuD ul {
-	padding: 0;
+.MenuD .MenuHide {
+	padding-left: 0;
 }
 .ListEquipements {
 	padding-left: 20px;
