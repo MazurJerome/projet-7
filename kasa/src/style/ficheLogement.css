@@ -43,3 +43,9 @@
 	line-height: 142.6%;
 	color: #ff6060;
 }
+@media (max-width: 600px) {
+	.LogementInfos {
+		display: flex;
+		flex-direction: column;
+	}
+}

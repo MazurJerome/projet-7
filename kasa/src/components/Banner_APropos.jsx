@@ -1,5 +1,5 @@
 import image_back from "../images/Background_APropos.jpg";
-import "../style/bannerAPropos.css";
+import "../style/BannerAPropos.css";
 
 function BannerAPropos() {
 	return (

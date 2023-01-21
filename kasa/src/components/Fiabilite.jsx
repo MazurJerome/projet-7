@@ -1,31 +1,12 @@
-import { useState } from "react";
-import "../style/Menu.css";
-import vector from "../images/Vector.svg";
+import "../style/Collapse.css";
+import Collapse from "./Collapse";
 
 function Fiabilite() {
-	const [toggle, setToggle] = useState(false);
+	const Title = "Fiabilité";
+	const Text =
+		"Les annonces postées sur Kasa garantissent une fiabilité totale. Les photos sont conformes aux logements, et toutes les informations sont régulièrement vérifiées par nos équipes.";
 
-	return (
-		<div className="Menu">
-			<div className="MenuFix">
-				<h2>Fiabbilité</h2>
-				<button className="ButtonMenu" onClick={() => setToggle(!toggle)}>
-					{toggle ? (
-						<img className="Vector" src={vector} alt="Fleche" />
-					) : (
-						<img className="Vector180" src={vector} alt="Fleche" />
-					)}
-				</button>
-			</div>
-			{toggle && (
-				<p className="MenuHide">
-					Les annonces postées sur Kasa garantissent une fiabilité totale. Les
-					photos sont conformes aux logements, et toutes les informations sont
-					régulièrement vérifiées par nos équipes.
-				</p>
-			)}
-		</div>
-	);
+	return <Collapse Title={Title} Text={Text} />;
 }
 
 export default Fiabilite;

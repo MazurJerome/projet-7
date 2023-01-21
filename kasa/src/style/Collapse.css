@@ -5,6 +5,7 @@
 	flex-direction: column;
 }
 .MenuFix {
+	width: 100%;
 	display: flex;
 	flex-direction: row;
 	justify-content: space-between;
@@ -43,4 +44,13 @@
 	margin: 16px 33px;
 	background-color: #ff6060;
 	rotate: 180deg;
+}
+@media (max-width: 600px) {
+	.Menu {
+		width: 90%;
+		min-width: 345px;
+		margin: 5% 5%;
+		display: flex;
+		flex-direction: column;
+	}
 }

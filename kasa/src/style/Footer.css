@@ -1,6 +1,7 @@
 footer {
 	margin-top: 20px;
 	width: 100%;
+	min-width: 345px;
 	height: 209px;
 	background-color: #000000;
 	display: flex;

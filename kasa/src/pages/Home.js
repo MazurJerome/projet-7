@@ -6,7 +6,7 @@ import Footer from "../components/Footer";
 function Home() {
 	return (
 		<div>
-			<Header />
+			<Header accLink="hide" />
 			<Banner />
 			<Gallery />
 			<Footer />

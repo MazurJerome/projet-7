@@ -9,7 +9,7 @@ import Securite from "../components/Securite";
 function APropos() {
 	return (
 		<div>
-			<Header />
+			<Header accLink="show" aProposLink="hide" />
 			<BannerAPropos />
 			<Fiabilite />
 			<Respect />

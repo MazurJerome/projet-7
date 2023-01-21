@@ -9,11 +9,14 @@ function App() {
 	return (
 		<div className="App">
 			<Routes>
-				<Route exact path="/" element={<Home />} />
-				<Route exact path="/404" element={<Error />} />
-				<Route exact path="/APropos" element={<APropos />} />
-				<Route exact path="/FicheLogement" element={<FicheLogement />} />
-				<Route exact path="/FicheLogement/:id" element={<FicheLogement />} />
+				<Route exact="true" path="/" element={<Home />} />
+				<Route path="*" element={<Error />} />
+				<Route exact="true" path="/APropos" element={<APropos />} />
+				<Route
+					exact="true"
+					path="/FicheLogement/:id"
+					element={<FicheLogement />}
+				/>
 			</Routes>
 		</div>
 	);

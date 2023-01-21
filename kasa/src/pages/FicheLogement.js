@@ -1,88 +1,58 @@
-import { useState } from "react";
+import { useParams, useNavigate } from "react-router-dom";
+import { useEffect } from "react";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
 import TitleLogement from "../components/TitleLogement";
-import Carrousel from "../components/Carrousel";
+import Slideshow from "../components/Slideshow";
 import Host from "../components/Host";
-import "../style/ficheLogement.css";
-import { useParams } from "react-router-dom";
+import "../style/FicheLogement.css";
 import Bank from "../BDD/bank.json";
-import "../style/Menu.css";
-import vector from "../images/Vector.svg";
+import "../style/Collapse.css";
+import Collapse from "../components/Collapse";
 
-function FicheLogement() {
-	const [toggle, setToggle] = useState(false);
-	const [toggle1, setToggle1] = useState(false);
+const FicheLogement = () => {
 	const { id } = useParams();
-	let product = [];
-	Bank.forEach((element) => {
-		if (element.id === id) {
-			product[0] = element;
-		}
-	});
+	const card = Bank.find((item) => item.id === id);
+	const navigate = useNavigate();
 
-	return (
-		<div>
-			<Header />
-			<Carrousel img={product[0].pictures} />
-			<div className="LogementInfos">
-				<TitleLogement
-					title={product[0].title}
-					tags={product[0].tags}
-					location={product[0].location}
-				/>
-				<Host
-					name={product[0].host.name}
-					picture={product[0].host.picture}
-					rating={product[0].rating}
-				/>
-			</div>
-			<div className="MenusLogement">
-				<div className="MenusLogement50">
-					<div className="MenuG">
-						<div className="MenuFix">
-							<h2>Description</h2>
-							<button className="ButtonMenu" onClick={() => setToggle(!toggle)}>
-								{toggle ? (
-									<img className="Vector" src={vector} alt="Fleche" />
-								) : (
-									<img className="Vector180" src={vector} alt="Fleche" />
-								)}
-							</button>
-						</div>
-						{toggle && <p className="MenuHide">{product[0].description}</p>}
-					</div>
+	useEffect(() => {
+		if (!card) {
+			navigate("/404");
+		}
+	}, [card, navigate, id]);
+
+	if (card) {
+		const Title = "Description";
+		const Text = card.description;
+		const Title2 = "Equipement";
+		const Text2 = card.equipments.map((element, ind) => (
+			<li className="ListEquipements" key={ind}>
+				{element}
+			</li>
+		));
+
+		return (
+			<div>
+				<Header accLink="show" aProposLink="show" />
+				<Slideshow img={card.pictures} />
+				<div className="LogementInfos">
+					<TitleLogement
+						title={card.title}
+						tags={card.tags}
+						location={card.location}
+					/>
+					<Host
+						name={card.host.name}
+						picture={card.host.picture}
+						rating={card.rating}
+					/>
 				</div>
-				<div className="MenusLogement50">
-					<div className="MenuD">
-						<div className="MenuFix">
-							<h2>Equipement</h2>
-							<button
-								className="ButtonMenu"
-								onClick={() => setToggle1(!toggle1)}
-							>
-								{toggle1 ? (
-									<img className="Vector" src={vector} alt="Fleche" />
-								) : (
-									<img className="Vector180" src={vector} alt="Fleche" />
-								)}
-							</button>
-						</div>
-						{toggle1 && (
-							<ul className="MenuHide">
-								{product[0].equipments.map((element, ind) => (
-									<li className="ListEquipements" key={ind}>
-										{element}
-									</li>
-								))}
-							</ul>
-						)}
-					</div>
-				</div>
+				<Collapse Title={Title} Text={Text} />
+				<Collapse Title={Title2} Text={Text2} />
+				<Footer />
 			</div>
-			<Footer />
-		</div>
-	);
-}
+		);
+	}
+};
 
 export default FicheLogement;
