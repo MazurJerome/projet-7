@@ -50,8 +50,11 @@ function FicheLogement() {
 						rating={card.rating}
 					/>
 				</div>
-				<Collapse Title={Title} Text={Text} />
-				<Collapse Title={Title2} Text={Text2} />
+				<div className="CollapseRow">
+					<Collapse Title={Title} Text={Text} />
+					<Collapse Title={Title2} Text={Text2} />
+				</div>
+
 				<Footer />
 			</div>
 		);
