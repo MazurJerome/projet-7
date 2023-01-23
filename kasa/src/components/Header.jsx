@@ -3,6 +3,7 @@ import { NavLink } from "react-router-dom";
 import logo from "../images/LOGO.svg";
 
 function Header(props) {
+	//recuperation des propos pour savoir si on affiche les deux liens
 	const accLink = props.accLink;
 	const aProposLink = props.aProposLink;
 
@@ -32,6 +33,7 @@ function Header(props) {
 			</header>
 		);
 	}
+
 	if (accLink === "show" && aProposLink === "show") {
 		return (
 			<header>

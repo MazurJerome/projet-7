@@ -1,16 +1,19 @@
 import { useParams, useNavigate } from "react-router-dom";
 import { useEffect } from "react";
+
+import Bank from "../BDD/bank.json";
+
 import Header from "../components/Header";
 import Footer from "../components/Footer";
 import TitleLogement from "../components/TitleLogement";
 import Slideshow from "../components/Slideshow";
 import Host from "../components/Host";
-import "../style/FicheLogement.css";
-import Bank from "../BDD/bank.json";
-import "../style/Collapse.css";
 import Collapse from "../components/Collapse";
 
-const FicheLogement = () => {
+import "../style/FicheLogement.css";
+import "../style/Collapse.css";
+
+function FicheLogement() {
 	const { id } = useParams();
 	const card = Bank.find((item) => item.id === id);
 	const navigate = useNavigate();
@@ -53,6 +56,6 @@ const FicheLogement = () => {
 			</div>
 		);
 	}
-};
+}
 
 export default FicheLogement;

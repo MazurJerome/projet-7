@@ -4,7 +4,7 @@
 	height: 300px;
 	display: flex;
 }
-.banner-d {
+.banner-box {
 	position: absolute;
 	width: 86%;
 	height: 223px;
@@ -30,7 +30,7 @@
 	mix-blend-mode: darken;
 	opacity: 0.3;
 }
-.banner-p {
+.banner-h1 {
 	position: absolute;
 	width: 60%;
 	right: 18%;
@@ -43,7 +43,7 @@
 }
 
 @media (max-width: 900px) {
-	.banner-p {
+	.banner-h1 {
 		width: 60%;
 		right: 13%;
 		top: 18%;
@@ -51,7 +51,7 @@
 	}
 }
 @media (max-width: 600px) {
-	.banner-p {
+	.banner-h1 {
 		width: 70%;
 		right: 10%;
 		top: 18%;

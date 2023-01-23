@@ -3,6 +3,7 @@ import "../style/Collapse.css";
 import vector from "../images/Vector.svg";
 
 function Collapse(props) {
+	//useState pour que le menu soit ouvert ou fermé
 	const [toggle, setToggle] = useState(false);
 	const collapseTitle = props.Title;
 	const collapseText = props.Text;

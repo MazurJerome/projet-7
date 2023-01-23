@@ -7,6 +7,8 @@ function Host(props) {
 	const picture = props.picture;
 	const rating = props.rating;
 
+	//pour afficher les etoiles, je creer un tableau de booleen ,
+	//true pour les etoile rouge et false pour les grises
 	let Stars = [];
 	for (let i = 0; i < 5; i++) {
 		if (i < rating) {

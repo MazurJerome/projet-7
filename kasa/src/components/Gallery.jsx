@@ -3,6 +3,8 @@ import React from "react";
 import Bank from "../BDD/bank.json";
 import "../style/Gallery.css";
 
+/* fonction qui affiche la liste des logement disponible et toutes les infos, 
+    dans un lien de redirection sur la page produit, le tout avec un arrey.map */
 function Gallery() {
 	const BDD = Bank;
 	const routeLogement = "/FicheLogement/";
