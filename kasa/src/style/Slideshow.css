@@ -2,9 +2,15 @@
 	width: 96%;
 	height: 415px;
 	border-radius: 25px;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	z-index: 1;
 }
 .ContainerSlideshow {
 	display: flex;
+	height: 415px;
 	padding: 30px 3%;
 	position: relative;
 }
@@ -13,6 +19,7 @@
 	height: 79px;
 }
 .ButtonSlideshowG {
+	z-index: 2;
 	position: absolute;
 	background-color: transparent;
 	border: none;
@@ -21,6 +28,7 @@
 	left: 3%;
 }
 .ButtonSlideshowD {
+	z-index: 2;
 	position: absolute;
 	background-color: transparent;
 	border: none;
