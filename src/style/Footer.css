@@ -1,0 +1,29 @@
+footer {
+	margin-top: 20px;
+	width: 100%;
+	min-width: 345px;
+	height: 209px;
+	background-color: #000000;
+	display: flex;
+	align-items: center;
+	flex-direction: column;
+}
+.App-logo {
+	margin-top: 66px;
+	display: flex;
+	fill: #ffffff;
+	width: 122px;
+	height: 40px;
+}
+.p-foot {
+	width: 513px;
+	height: 46px;
+	font-family: "Montserrat";
+	font-size: 24px;
+	display: flex;
+	justify-content: center;
+	align-items: flex-end;
+	text-align: center;
+	color: #ffffff;
+	margin-bottom: 29px;
+}

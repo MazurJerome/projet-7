@@ -1,0 +1,45 @@
+.contenaire {
+	width: 87%;
+	min-width: 345px;
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: space-around;
+	margin-left: 6.5%;
+	padding-bottom: 56px;
+	background: #f7f7f7;
+	border-radius: 25px;
+}
+.box {
+	position: relative;
+	padding-top: 56px;
+	width: 340px;
+	height: 340px;
+	border-radius: 10px;
+}
+.imgGallery {
+	position: absolute;
+	z-index: 1;
+	width: 340px;
+	height: 340px;
+	border-radius: 10px;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+.titleBox {
+	z-index: 2;
+	position: absolute;
+	left: 5.88%;
+	right: 5.88%;
+	top: 78.82%;
+	bottom: 5.88%;
+
+	font-family: "Montserrat";
+	font-size: 18px;
+
+	display: flex;
+	align-items: flex-end;
+
+	color: #ffffff;
+}

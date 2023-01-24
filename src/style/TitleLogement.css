@@ -1,0 +1,57 @@
+.logement_title {
+	display: flex;
+	flex-direction: column;
+	width: 50%;
+}
+.title {
+	margin: 0;
+	padding-left: 7%;
+	font-family: "Montserrat";
+	font-style: normal;
+	font-weight: 500;
+	font-size: 36px;
+	line-height: 142.6%;
+	display: flex;
+	align-items: flex-end;
+	color: #ff6060;
+}
+.location {
+	height: 26px;
+	margin: 0;
+	padding-left: 7%;
+	font-family: "Montserrat";
+	font-style: normal;
+	font-weight: 500;
+	font-size: 18px;
+	line-height: 142.6%;
+	display: flex;
+	align-items: flex-end;
+	color: #ff6060;
+}
+.tags {
+	margin: 0;
+	list-style-type: none;
+	padding-left: 7%;
+	display: flex;
+	flex-direction: row;
+}
+.tags li {
+	margin: 10px 10px 10px 0;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 125px;
+	height: 25px;
+	background: #ff6060;
+	border-radius: 10px;
+	color: #ffffff;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+}
+
+@media (max-width: 600px) {
+	.logement_title {
+		width: 95%;
+		margin-bottom: 15px;
+	}
+}

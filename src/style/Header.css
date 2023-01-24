@@ -1,0 +1,60 @@
+header {
+	width: 86%;
+	min-width: 345px;
+	height: 68px;
+	margin: 40px 100px;
+	padding: 0;
+	display: flex;
+	justify-content: space-between;
+}
+.App-logo-head {
+	margin: 0;
+}
+nav {
+	width: 30%;
+	min-width: 215px;
+	height: 50%;
+	display: flex;
+	margin-top: 17px;
+	justify-content: space-between;
+	font-family: "Montserrat";
+	font-size: 24px;
+}
+.navCenter {
+	display: flex;
+	justify-content: flex-end;
+}
+.navbar-Accueil {
+	text-decoration: none;
+	margin-right: 5px;
+	color: #ff6060;
+}
+.navbar-Accueil:hover {
+	text-decoration-line: underline;
+}
+.navbar-APropos {
+	width: 110px;
+	margin: 0 5px;
+	text-decoration: none;
+	color: #ff6060;
+}
+.navbar-APropos:hover {
+	text-decoration-line: underline;
+}
+@media (max-width: 600px) {
+	header {
+		width: 86%;
+		height: 68px;
+		padding: 0;
+		margin: 3%;
+		display: flex;
+		justify-content: space-between;
+	}
+	.App-logo-head {
+		width: 40%;
+		margin-right: 10px;
+	}
+	nav {
+		font-size: 18px;
+	}
+}

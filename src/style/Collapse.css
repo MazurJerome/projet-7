@@ -1,0 +1,73 @@
+.Menu {
+	width: 71%;
+	margin: 25px 14.5%;
+	display: flex;
+	flex-direction: column;
+}
+.MenuFix {
+	width: 100%;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	background-color: #ff6060;
+	border-radius: 5px;
+}
+.MenuFix h2 {
+	padding-left: 18px;
+	font-family: "Montserrat";
+	font-size: 24px;
+	display: flex;
+	align-items: center;
+	color: #ffffff;
+}
+.MenuHide {
+	margin: 0;
+	padding: 36px 27px 19px 18px;
+	background: #f7f7f7;
+	border-radius: 0 0 5px 5px;
+	font-family: "Montserrat";
+	font-size: 24px;
+	line-height: 142.6%;
+	color: #ff6060;
+}
+.ButtonMenu {
+	border: 0;
+	background-color: #ff6060;
+	border-radius: 5px;
+}
+.Vector {
+	display: flex;
+	margin: 16px 33px;
+	background-color: #ff6060;
+}
+.Vector180 {
+	display: flex;
+	margin: 16px 33px;
+	background-color: #ff6060;
+	rotate: 180deg;
+}
+.CollapseRow {
+	display: flex;
+	width: 100%;
+}
+.CollapseRow .Menu {
+	display: flex;
+	width: 100%;
+	margin: 10px 4.5%;
+}
+@media (max-width: 600px) {
+	.Menu {
+		width: 90%;
+		min-width: 345px;
+		margin: 5% 5%;
+		display: flex;
+		flex-direction: column;
+	}
+	.CollapseRow {
+		flex-direction: column;
+	}
+	.MenuFix {
+		width: 95%;
+		margin-right: 20px;
+	}
+}

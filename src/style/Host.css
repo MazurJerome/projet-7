@@ -1,0 +1,65 @@
+.logementHostInfos {
+	width: 49%;
+	margin-right: 7%;
+	display: flex;
+	flex-direction: column;
+	align-items: flex-end;
+}
+.logementHost {
+	display: flex;
+	flex-direction: row;
+}
+.stars {
+	margin: 10px 0;
+	display: flex;
+	flex-direction: row;
+	justify-content: flex-end;
+	width: 200px;
+	height: 36px;
+}
+.star {
+	display: flex;
+	width: 36px;
+	height: 36px;
+}
+.name {
+	width: 93px;
+	height: 52px;
+	margin: 10px;
+	font-family: "Montserrat";
+	font-style: normal;
+	font-weight: 500;
+	font-size: 18px;
+	line-height: 142.6%;
+	display: flex;
+	align-items: flex-end;
+	text-align: right;
+	color: #ff6060;
+}
+.PictureHost {
+	width: 64px;
+	height: 64px;
+	border-radius: 50px;
+}
+@media (max-width: 600px) {
+	.logementHostInfos {
+		width: 95%;
+		flex-direction: row-reverse;
+		justify-content: space-between;
+	}
+	.name {
+		width: 75px;
+		font-size: 12px;
+		display: flex;
+		align-items: center;
+		text-align: right;
+	}
+	.stars {
+		margin: 5%;
+		justify-content: flex-start;
+	}
+	.star {
+		width: 20px;
+		height: 20px;
+	}
+}
